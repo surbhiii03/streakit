@@ -1,0 +1,107 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FFB8E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.container {
+    background-color: #FFEDFA;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    width: 350px;
+    height: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.streak-display {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #BE5985;
+    margin-bottom: 8px;
+}
+
+.label {
+    font-size: 1.125rem;
+    color: #6b7280;
+}
+
+.last-updated {
+    font-size: 0.9rem;
+    color: #9ca3af;
+}
+
+.tick-button {
+    background-color: #BE5985;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 10px rgba(190, 89, 133, 0.3);
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.tick-button:hover:not(:disabled) {
+    background-color: #EC7FA9;
+    transform: translateY(-2px);
+}
+
+.tick-button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.tick-button:disabled {
+    background-color: #EC7FA9;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.date-time-display {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #374151;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 24px;
+        width: 280px;
+        height: 280px;
+    }
+    .streak-display {
+        font-size: 3rem;
+    }
+    .tick-button {
+        font-size: 1.1rem;
+        padding: 12px 24px;
+    }
+    .date-time-display {
+        top: 10px;
+        left: 10px;
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+}
